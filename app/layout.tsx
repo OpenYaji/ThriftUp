@@ -1,0 +1,38 @@
+import type React from "react"
+import type { Metadata } from "next"
+import { Geist, Geist_Mono } from "next/font/google"
+import { Analytics } from "@vercel/analytics/next"
+import "./globals.css"
+import { AuthProvider } from "@/lib/auth-provider"
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+})
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+})
+
+export const metadata: Metadata = {
+  title: "ThriftUp - Rare Vintage Fashion Marketplace",
+  description:
+    "Discover exclusive vintage apparel through auctions, connect with collectors at thrift-meet events, and join the circular fashion community.",
+  keywords: ["vintage fashion", "thrift", "auction", "marketplace", "sustainable", "circular economy"],
+}
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
+  return (
+    <html lang="en">
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <AuthProvider>{children}</AuthProvider>
+        <Analytics />
+      </body>
+    </html>
+  )
+}
