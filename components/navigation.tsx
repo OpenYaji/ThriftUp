@@ -28,25 +28,28 @@ export default function Navigation() {
   }
 
   return (
-    <nav className="sticky top-0 z-50 bg-card border-b border-border">
+    <nav className="sticky top-0 z-50 bg-card/95 backdrop-blur-md border-b border-border shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20 sm:h-24">
           <Link href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-lg" />
-            <span className="gradient-text font-bold text-xl">ThriftUp</span>
+            <img 
+              src="/LogoTU.png" 
+              alt="ThriftUp Logo" 
+              className="h-50 w-auto sm:h-50 md:h-50 lg:h-50"
+            />
           </Link>
 
           <div className="hidden md:flex gap-8">
-            <Link href="/marketplace" className="hover:text-primary transition">
+            <Link href="/marketplace" className="px-4 py-2 rounded-lg hover:bg-black hover:text-white transition-all duration-300 font-medium">
               Marketplace
             </Link>
-            <Link href="/auctions" className="hover:text-primary transition">
+            <Link href="/auctions" className="px-4 py-2 rounded-lg hover:bg-black hover:text-white transition-all duration-300 font-medium">
               Auctions
             </Link>
-            <Link href="/events" className="hover:text-primary transition">
+            <Link href="/events" className="px-4 py-2 rounded-lg hover:bg-black hover:text-white transition-all duration-300 font-medium">
               Events
             </Link>
-            <Link href="/community" className="hover:text-primary transition">
+            <Link href="/community" className="px-4 py-2 rounded-lg hover:bg-black hover:text-white transition-all duration-300 font-medium">
               Community
             </Link>
           </div>
@@ -73,7 +76,7 @@ export default function Navigation() {
                 </Link>
                 <Link
                   href="/auth/signup"
-                  className="px-6 py-2 bg-primary text-primary-foreground font-semibold rounded-lg hover:opacity-90 transition"
+                  className="px-6 py-2 bg-black text-white font-semibold rounded-lg hover:bg-black/90 transition"
                 >
                   Join
                 </Link>
@@ -94,16 +97,16 @@ export default function Navigation() {
 
         {isOpen && (
           <div className="md:hidden pb-4 flex flex-col gap-2">
-            <Link href="/marketplace" className="block px-4 py-2 hover:bg-muted rounded" onClick={() => setIsOpen(false)}>
+            <Link href="/marketplace" className="block px-4 py-2 rounded hover:bg-black hover:text-white transition-all duration-200 font-medium" onClick={() => setIsOpen(false)}>
               Marketplace
             </Link>
-            <Link href="/auctions" className="block px-4 py-2 hover:bg-muted rounded" onClick={() => setIsOpen(false)}>
+            <Link href="/auctions" className="block px-4 py-2 rounded hover:bg-black hover:text-white transition-all duration-200 font-medium" onClick={() => setIsOpen(false)}>
               Auctions
             </Link>
-            <Link href="/events" className="block px-4 py-2 hover:bg-muted rounded" onClick={() => setIsOpen(false)}>
+            <Link href="/events" className="block px-4 py-2 rounded hover:bg-black hover:text-white transition-all duration-200 font-medium" onClick={() => setIsOpen(false)}>
               Events
             </Link>
-            <Link href="/community" className="block px-4 py-2 hover:bg-muted rounded" onClick={() => setIsOpen(false)}>
+            <Link href="/community" className="block px-4 py-2 rounded hover:bg-black hover:text-white transition-all duration-200 font-medium" onClick={() => setIsOpen(false)}>
               Community
             </Link>
             {loading ? (
@@ -127,7 +130,7 @@ export default function Navigation() {
                 </Link>
                 <Link
                   href="/auth/signup"
-                  className="mx-4 px-6 py-2 bg-primary text-primary-foreground font-semibold rounded-lg hover:opacity-90 transition"
+                  className="mx-4 px-6 py-2 bg-black text-white font-semibold rounded-lg hover:bg-black/90 transition"
                   onClick={() => setIsOpen(false)}
                 >
                   Join

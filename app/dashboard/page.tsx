@@ -353,14 +353,22 @@ export default function DashboardPage() {
                                   {event.attendee_count}/{event.capacity} attending
                                 </p>
                               </div>
-                              <button
-                                onClick={() => deleteItem('event', event.id)}
-                                className="text-destructive hover:text-destructive/80"
-                              >
-                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-                                </svg>
-                              </button>
+                              <div className="flex flex-col gap-1">
+                                <Link
+                                  href={`/dashboard/events/${event.id}/manage`}
+                                  className="text-xs px-2 py-1 bg-accent text-accent-foreground rounded hover:opacity-90 transition text-center"
+                                >
+                                  Manage
+                                </Link>
+                                <button
+                                  onClick={() => deleteItem('event', event.id)}
+                                  className="text-destructive hover:text-destructive/80"
+                                >
+                                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                  </svg>
+                                </button>
+                              </div>
                             </div>
                           ))
                         )

@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-[color:var(--color-text)] text-white py-16">
+    <footer className="bg-[color:var(--color-text)] text-black py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
@@ -14,17 +14,17 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Marketplace</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
-                <a href="#" className="hover:text-white transition">
+                <a href="#" className="hover:text-black transition">
                   Browse Listings
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition">
+                <a href="#" className="hover:text-black transition">
                   Active Auctions
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition">
+                <a href="#" className="hover:text-black transition">
                   Sell Items
                 </a>
               </li>
@@ -34,17 +34,17 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Community</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
-                <a href="#" className="hover:text-white transition">
+                <a href="#" className="hover:text-black transition">
                   Thrift-Meet Events
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition">
+                <a href="#" className="hover:text-black transition">
                   Discussions
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition">
+                <a href="#" className="hover:text-black transition">
                   Leaderboard
                 </a>
               </li>
@@ -54,17 +54,17 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Support</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
-                <a href="#" className="hover:text-white transition">
+                <a href="#" className="hover:text-black transition">
                   Help Center
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition">
+                <a href="#" className="hover:text-black transition">
                   Contact Us
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition">
+                <a href="#" className="hover:text-black transition">
                   Privacy Policy
                 </a>
               </li>
